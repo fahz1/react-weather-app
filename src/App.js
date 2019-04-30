@@ -47,18 +47,29 @@ class App extends React.Component {
         return (
           <div>
             <div className="wrapper">
-                      <Titles />
-                    </div>
-                      <Form getWeather={this.getWeather} />
-                      <Weather
-                        temperature={this.state.temperature}
-                        humidity={this.state.humidity}
-                        city={this.state.city}
-                        country={this.state.country}
-                        description={this.state.description}
-                        error={this.state.error}
-                      />
-          </div>
+              <h4><Titles /></h4>
+                <div className="d-flex justify-content-center h-100">
+                <div className="card">
+                <div className="card-header">
+                  <h4>Find out temperature, conditions and more...</h4>
+                </div>
+
+                <div className="card-body">
+    						   <Form getWeather={this.getWeather} />
+                   <Weather
+                       temperature={this.state.temperature}
+                       humidity={this.state.humidity}
+                       city={this.state.city}
+                       country={this.state.country}
+                       description={this.state.description}
+                       error={this.state.error}
+                     />
+    					</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+
         );
       }
     };
